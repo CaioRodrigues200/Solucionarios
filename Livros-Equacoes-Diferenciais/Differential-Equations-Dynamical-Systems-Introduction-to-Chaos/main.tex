@@ -1,0 +1,51 @@
+\documentclass[portuguese,12pt,a4paper]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{babel}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{enumitem}
+\usepackage[
+	backend=bibtex,
+	style=alphabetic,
+	sorting=ynt
+]{biblatex}
+\addbibresource{bibliografia.bib}
+
+\title{Differential Equations, Dynamical Systems, and an Introduction to Chaos - Soluções}
+
+\newcommand{\cqd}{\hfill $\square$}
+\newenvironment{solucao}[1][]{\noindent\textbf{Solução#1:} }{\cqd}
+\newcounter{ex}
+\newtheorem{exercicio}[ex]{Exercício}
+\DeclareMathOperator{\dom}{dom}
+
+\begin{document}
+	
+	\maketitle
+	\tableofcontents
+	
+	\include{capitulos/cap1}
+	\include{capitulos/cap2}
+	\include{capitulos/cap3}
+	\include{capitulos/cap4}
+	\include{capitulos/cap5}
+	\include{capitulos/cap6}
+	\include{capitulos/cap7}
+	\include{capitulos/cap8}
+	\include{capitulos/cap9}
+	\include{capitulos/cap10}
+	\include{capitulos/cap11}
+	\include{capitulos/cap12}
+        \include{capitulos/cap13}
+        \include{capitulos/cap14}
+        \include{capitulos/cap15}
+        \include{capitulos/cap16}
+        \include{capitulos/cap17}
+	
+	\printbibliography[title=Referências]
+	
+\end{document}
