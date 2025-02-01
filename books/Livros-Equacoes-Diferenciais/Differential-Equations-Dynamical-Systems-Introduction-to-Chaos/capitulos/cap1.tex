@@ -1,0 +1,73 @@
+\chapter{First-Order Equations}
+
+\begin{exercicio}
+	Encontre a solução geral da equação diferencial $x'=ax+3$ onde $a$ é um parâmetro. Quais são os pontos de equilíbrio dessa equação? Para quais valores de $a$ os equilíbrios são atratores (sumidouros)? Para quais valores eles são repulsores (fontes)?
+\end{exercicio}
+
+\begin{solucao}
+Utilizando o método da separação de variáveis, a equação se resolve da seguinte forma: $$\frac{dx}{dt}=ax+3 \Rightarrow \frac{\frac{dx}{dt}}{ax+3}=1 \Rightarrow \int{\frac{\frac{dx}{dt}}{ax+3}}dt=\int dt$$
+é matematicamente possível mostrar que $$\int{\frac{\frac{dx}{dt}}{ax+3}}dt = \int{\frac{1}{ax+3}}dx$$
+assim, resolvendo as integrais, usando a regra da substituição para a integral à esquerda da equação, tem-se $$ln|ax+3|=at+C \Rightarrow |ax+3| = e^{at}\cdot e^C = e^{at} \cdot K$$
+Como $C$ é uma constante real arbitrária, $e^C = K$ seria a princípio uma constante real não-negativa. Porém, ao considerar o módulo no lado esquerdo da equação, $ax+3$ pode na realidade assumir o valor de $\pm e^{at}\cdot K$. Dessa forma retira-se o módulo e assume a generalização para a constante $K$, resultando na solução geral: $$ax+3 = Ke^{at} ~~\Rightarrow~~ x(t) = Ke^{at} - \frac{3}{a}$$
+lembrando que $\frac{K}{a}$ ainda é uma constante $K$, já que cada $a$ é constante para cada equação diferencial. \par
+
+Os pontos de equilíbrio na verdade são as raízes de $f_a(x) = ax+3$, na qual é somente uma, sendo $x=-3/a$. Este ponto de equilíbrio ocorre para a solução onde $K=0$. Para descobrir se o ponto de equilíbrio $x=-3/a$ é um \textit{semidouro} ou uma \textit{fonte}, calcula-se $f'_a(0) = a$. Dessa forma, se $a>0$, $f'_a(0)>0$ e consequentemente o ponto de equilíbrio será uma \textit{fonte}. Caso $a<0$, $f'_a(0)<0$ e o ponto de equilíbrio será um \textit{semidouro}.
+
+\end{solucao}
+
+\begin{exercicio}
+Para cada uma das seguintes equações diferenciais, encontre todas as soluções de equilíbrio e determine se elas são atratores (sumidouros), repulsores (fontes) ou nenhuma das opções. Além disso, esboce a linha de fase.
+
+\begin{enumerate}[label=(\alph{*})]
+		\item $x'=x^3-3x$
+		\item $x'=x^4-x^2$
+		\item $x'=cosx$
+		\item $x'=sin^2x$
+		\item $x'=|1-x^2|$
+	\end{enumerate}
+\end{exercicio}
+
+\begin{solucao}
+
+Para encontrar as soluções de equilíbrio, repete-se o procedimento do exercício 1. Determinam-se os zeros das funções $x'= f(x)$, e por fim derivando-a em função de $x$ classifica-as como \textit{fontes} ou \textit{semidouros}.
+
+\begin{enumerate}[label=(\alph{*})]
+\item $x'=x^3-3x$
+
+As raízes de $f(x)=x^3 - 3x$ são $x=0$ e $x=\pm \sqrt{3}$, sendo esses os pontos de equilíbrio.
+
+Derivando temos $f'(x)=3x^2 - 3$. Assim $f'(0) = -3$ é um \textit{semidouro}, e $f'(\pm \sqrt{3}) = 6$ são \textit{fontes}.
+
+\item $x'=x^4-x^2$
+
+As raízes de $f(x)=x^4 - x^2$ são $x=0$ e $x=\pm 1$, sendo esses os pontos de equilíbrio.
+
+Derivando temos $f'(x)=4x^3 - 2x$. Assim $f'(0) = 0$ não é nem um \textit{semidouro} nem uma \textit{fonte}, $f'(1) = 2$ é uma \textit{fonte} e $f'(-1) = -2$ é um \textit{semidouro}.
+
+\item $x'=cosx$
+
+As raízes de $f(x)=cosx$ são $x=\pi/2 + k\pi$ onde $k \in \mathbb{Z} $, sendo esses os pontos de equilíbrio.
+
+Derivando temos $f'(x)=-senx$. Assim $f'(\pi/2 + k\pi) = 1$ para todo $k$ par, sendo esses pontos de equilíbrio \textit{fontes}, e $f'(\pi/2 + k\pi) = -1$ para todo $k$ ímpar, sendo esses pontos de equilíbrio \textit{semidouros}.
+
+\item $x'=sin^2x$
+
+As raízes de $f(x)=sin^2x$ são $x= k\pi$ onde $k \in \mathbb{Z} $, sendo esses os pontos de equilíbrio.
+
+Derivando temos $f'(x)=2~cosx~sinx$. Assim $f'(k\pi) = 0$ não são nem \textit{semidouros} nem \textit{fontes}.
+
+\item $x'=|1-x^2|$
+
+As raízes de $f(x)=|1-x^2|$ são $x=\pm 1$, sendo esses os pontos de equilíbrio.
+
+Derivando temos
+
+\begin{cases} 
+$f'(x)=-2x~,~~~\text{se}~|x|<1 $ \\ $f'(x)=2x~,~~~\text{se}~|x|>1 $
+\end{cases} 
+
+Assim $f'(\pm 1)$ é indefinido, logo não são nem \textit{semidouros} nem \textit{fontes}.
+
+\end{enumerate}
+
+\end{solucao}
